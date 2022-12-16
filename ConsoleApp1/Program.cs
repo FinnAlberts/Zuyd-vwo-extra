@@ -77,6 +77,41 @@ namespace ConsoleApp1
             Dictionary<string, int> leeftijden = new Dictionary<string, int>();
             leeftijden["Finn"] = 20;
             Console.WriteLine("De leeftijd van Finn is " + leeftijden["Finn"]);
+
+
+
+            // Klasses en objecten (klasses staan in objects.cs)
+            School school = new School() { Naam = "Zuyd Hogeschool", Oppervlakte = 1000 };
+
+            Console.WriteLine(school.Naam);
+
+            Student cooleStudent = new Student() { Studentnummer = 1234, Naam = "Joey" };
+
+            school.Studenten.Add(cooleStudent);
+
+            Student ralf = new Student() { Studentnummer = 4321, Naam = "Ralf" };
+            school.Studenten.Add(ralf);
+
+            Student nieuweStudent = new Student(123, "Finn", "AI");
+
+            school.Studenten.Add(nieuweStudent);
+
+            // nieuweStudent.Specialiteit mag niet, want Specialiteit is private.
+            // De functie GeefSpecialiteit mag wel, want die functie is public.
+            // Het vraagteken achter string geef aan dat het null zou kunnen zijn.
+
+            string? specialty = nieuweStudent.GeefSpecialiteit();
+        }
+
+        // Functie
+        int telOp(int x, int y)
+        {
+            return x + y;
+        }
+
+        void printHallo()
+        {
+            Console.WriteLine("Hallo");
         }
     }
 }
