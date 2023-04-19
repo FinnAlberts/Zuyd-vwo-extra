@@ -19,7 +19,7 @@ namespace ConsoleApp1
             // If statements
             if (x > 3)
             {
-                Console.WriteLine("X is groter als 3");
+                Console.WriteLine("X is groter dan 3");
             }
             else if (x == 3)
             {
@@ -27,7 +27,7 @@ namespace ConsoleApp1
             }
             else
             {
-                Console.WriteLine("X is niet groter als 3");
+                Console.WriteLine("X is niet groter dan 3");
             }
 
             // LOOPS
